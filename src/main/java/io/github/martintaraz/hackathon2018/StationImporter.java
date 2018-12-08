@@ -21,6 +21,7 @@ import org.wikidata.wdtk.datamodel.implementation.StringValueImpl;
 import org.wikidata.wdtk.datamodel.implementation.TermImpl;
 import org.wikidata.wdtk.datamodel.implementation.ValueSnakImpl;
 import org.wikidata.wdtk.datamodel.interfaces.EntityIdValue;
+import org.wikidata.wdtk.datamodel.interfaces.GlobeCoordinatesValue;
 import org.wikidata.wdtk.datamodel.interfaces.ItemDocument;
 import org.wikidata.wdtk.datamodel.interfaces.ItemIdValue;
 import org.wikidata.wdtk.datamodel.interfaces.MonolingualTextValue;
@@ -105,8 +106,10 @@ public class StationImporter {
 		editor.disableEditing();
 		WikibaseDataFetcher wbdf = new WikibaseDataFetcher(connection, siteIri);
 		
+		System.out.println("Stations: "+query.getResult().size());
+		int counter=0;
 		for(Station station : query.getResult()) {
-			System.out.println("\n"+station.getName());
+			System.out.println("\n"+(counter++)+" "+station.getName());
 			
 			ItemDocument entity = findEntity(wbdf, station);
 			if(entity != null) {
@@ -202,7 +205,7 @@ public class StationImporter {
 								entity.getEntityId()
 							));
 						}
-						else if(coords.toString().length() > entity.findStatementGlobeCoordinatesValue(COORDINATES).toString().length()) {
+						else if(coords.toString().length() > entity.findStatementGroup(COORDINATES).getStatements().stream().mapToInt(st -> ((GlobeCoordinatesValue)st.getValue()).toString().length()).max().getAsInt()) {
 							message(message, "improved coordinates "+entity.findStatementGlobeCoordinatesValue(COORDINATES)+" -> "+coords);
 							entity = entity.withStatement(new StatementImpl(
 								null,
