@@ -1,4 +1,4 @@
-package io.github.martintaraz.hackathon2018;
+package io.github.martintaraz.dbdatapublisherbot;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -39,10 +39,10 @@ import org.wikidata.wdtk.wikibaseapi.apierrors.MediaWikiApiErrorException;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.MoreCollectors;
 
-import io.github.martintaraz.hackathon2018.models.stations.EVANumber;
-import io.github.martintaraz.hackathon2018.models.stations.RiL100Identifier;
-import io.github.martintaraz.hackathon2018.models.stations.Station;
-import io.github.martintaraz.hackathon2018.models.stations.StationQuery;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.EVANumber;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.RiL100Identifier;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.Station;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.StationQuery;
 
 public class StationImporter {
 	

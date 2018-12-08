@@ -11,7 +11,7 @@
  */
 
 
-package io.github.martintaraz.hackathon2018.models.stations;
+package io.github.martintaraz.dbdatapublisherbot.models.stations;
 
 import java.util.Objects;
 import java.util.Arrays;

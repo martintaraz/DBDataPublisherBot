@@ -11,7 +11,7 @@
  */
 
 
-package io.github.martintaraz.hackathon2018.models.stations;
+package io.github.martintaraz.dbdatapublisherbot.models.stations;
 
 import java.util.Objects;
 import java.util.Arrays;
@@ -29,7 +29,7 @@ import java.io.IOException;
  */
 @ApiModel(description = "reference object. an internal organization type of Station&Service, regional department.")
 @javax.annotation.processing.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T20:50:44.823+01:00")
-public class RegionalBereichRef {
+public class Regionalbereich {
   @SerializedName("name")
   private String name = null;
 
@@ -39,7 +39,7 @@ public class RegionalBereichRef {
   @SerializedName("number")
   private Integer number = null;
 
-  public RegionalBereichRef name(String name) {
+  public Regionalbereich name(String name) {
     this.name = name;
     return this;
   }
@@ -57,7 +57,7 @@ public class RegionalBereichRef {
     this.name = name;
   }
 
-  public RegionalBereichRef shortName(String shortName) {
+  public Regionalbereich shortName(String shortName) {
     this.shortName = shortName;
     return this;
   }
@@ -75,7 +75,7 @@ public class RegionalBereichRef {
     this.shortName = shortName;
   }
 
-  public RegionalBereichRef number(Integer number) {
+  public Regionalbereich number(Integer number) {
     this.number = number;
     return this;
   }
@@ -102,10 +102,10 @@ public class RegionalBereichRef {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    RegionalBereichRef regionalBereichRef = (RegionalBereichRef) o;
-    return Objects.equals(this.name, regionalBereichRef.name) &&
-        Objects.equals(this.shortName, regionalBereichRef.shortName) &&
-        Objects.equals(this.number, regionalBereichRef.number);
+    Regionalbereich regionalbereich = (Regionalbereich) o;
+    return Objects.equals(this.name, regionalbereich.name) &&
+        Objects.equals(this.shortName, regionalbereich.shortName) &&
+        Objects.equals(this.number, regionalbereich.number);
   }
 
   @Override
@@ -117,7 +117,7 @@ public class RegionalBereichRef {
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class RegionalBereichRef {\n");
+    sb.append("class Regionalbereich {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
     sb.append("    shortName: ").append(toIndentedString(shortName)).append("\n");

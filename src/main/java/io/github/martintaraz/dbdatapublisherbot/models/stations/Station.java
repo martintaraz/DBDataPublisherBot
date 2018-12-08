@@ -11,7 +11,7 @@
  */
 
 
-package io.github.martintaraz.hackathon2018.models.stations;
+package io.github.martintaraz.dbdatapublisherbot.models.stations;
 
 import java.util.Objects;
 import java.util.Arrays;
@@ -20,18 +20,20 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+
+import io.github.martintaraz.dbdatapublisherbot.models.stations.Address;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.Aufgabentraeger;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.EVANumber;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.Partial;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.RegionalBereichRef;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.RiL100Identifier;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.SZentraleRef;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.Schedule;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.StationManagementRef;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.TimetableOffice;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
-import io.github.martintaraz.hackathon2018.models.stations.Address;
-import io.github.martintaraz.hackathon2018.models.stations.Aufgabentraeger;
-import io.github.martintaraz.hackathon2018.models.stations.EVANumber;
-import io.github.martintaraz.hackathon2018.models.stations.Partial;
-import io.github.martintaraz.hackathon2018.models.stations.RegionalBereichRef;
-import io.github.martintaraz.hackathon2018.models.stations.RiL100Identifier;
-import io.github.martintaraz.hackathon2018.models.stations.SZentraleRef;
-import io.github.martintaraz.hackathon2018.models.stations.Schedule;
-import io.github.martintaraz.hackathon2018.models.stations.StationManagementRef;
-import io.github.martintaraz.hackathon2018.models.stations.TimetableOffice;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;

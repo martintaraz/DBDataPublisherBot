@@ -11,7 +11,7 @@
  */
 
 
-package io.github.martintaraz.hackathon2018.models.stations;
+package io.github.martintaraz.dbdatapublisherbot.models.stations;
 
 import java.util.Objects;
 import java.util.Arrays;
@@ -25,26 +25,30 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * StationManagement
+ * reference object. an internal organization type of Station&amp;Service, regional department.
  */
+@ApiModel(description = "reference object. an internal organization type of Station&Service, regional department.")
 @javax.annotation.processing.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T20:50:44.823+01:00")
-public class StationManagement {
+public class RegionalBereichRef {
   @SerializedName("name")
   private String name = null;
+
+  @SerializedName("shortName")
+  private String shortName = null;
 
   @SerializedName("number")
   private Integer number = null;
 
-  public StationManagement name(String name) {
+  public RegionalBereichRef name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * Get name
+   * name of the regional department
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "name of the regional department")
   public String getName() {
     return name;
   }
@@ -53,16 +57,34 @@ public class StationManagement {
     this.name = name;
   }
 
-  public StationManagement number(Integer number) {
+  public RegionalBereichRef shortName(String shortName) {
+    this.shortName = shortName;
+    return this;
+  }
+
+   /**
+   * Get shortName
+   * @return shortName
+  **/
+  @ApiModelProperty(value = "")
+  public String getShortName() {
+    return shortName;
+  }
+
+  public void setShortName(String shortName) {
+    this.shortName = shortName;
+  }
+
+  public RegionalBereichRef number(Integer number) {
     this.number = number;
     return this;
   }
 
    /**
-   * identifier
+   * unique identifier of the regional department
    * @return number
   **/
-  @ApiModelProperty(value = "identifier")
+  @ApiModelProperty(value = "unique identifier of the regional department")
   public Integer getNumber() {
     return number;
   }
@@ -80,23 +102,25 @@ public class StationManagement {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    StationManagement stationManagement = (StationManagement) o;
-    return Objects.equals(this.name, stationManagement.name) &&
-        Objects.equals(this.number, stationManagement.number);
+    RegionalBereichRef regionalBereichRef = (RegionalBereichRef) o;
+    return Objects.equals(this.name, regionalBereichRef.name) &&
+        Objects.equals(this.shortName, regionalBereichRef.shortName) &&
+        Objects.equals(this.number, regionalBereichRef.number);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, number);
+    return Objects.hash(name, shortName, number);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class StationManagement {\n");
+    sb.append("class RegionalBereichRef {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    shortName: ").append(toIndentedString(shortName)).append("\n");
     sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("}");
     return sb.toString();

@@ -11,7 +11,7 @@
  */
 
 
-package io.github.martintaraz.hackathon2018.models.stations;
+package io.github.martintaraz.dbdatapublisherbot.models.stations;
 
 import java.util.Objects;
 import java.util.Arrays;
@@ -25,48 +25,26 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * reference object contained in station
+ * StationManagement
  */
-@ApiModel(description = "reference object contained in station")
 @javax.annotation.processing.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T20:50:44.823+01:00")
-public class SZentraleRef {
-  @SerializedName("number")
-  private Integer number = null;
-
+public class StationManagement {
   @SerializedName("name")
   private String name = null;
 
-  @SerializedName("publicPhoneNumber")
-  private String publicPhoneNumber = null;
+  @SerializedName("number")
+  private Integer number = null;
 
-  public SZentraleRef number(Integer number) {
-    this.number = number;
-    return this;
-  }
-
-   /**
-   * unique identifier for SZentrale
-   * @return number
-  **/
-  @ApiModelProperty(value = "unique identifier for SZentrale")
-  public Integer getNumber() {
-    return number;
-  }
-
-  public void setNumber(Integer number) {
-    this.number = number;
-  }
-
-  public SZentraleRef name(String name) {
+  public StationManagement name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * unique identifier of 3SZentrale
+   * Get name
    * @return name
   **/
-  @ApiModelProperty(value = "unique identifier of 3SZentrale")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -75,22 +53,22 @@ public class SZentraleRef {
     this.name = name;
   }
 
-  public SZentraleRef publicPhoneNumber(String publicPhoneNumber) {
-    this.publicPhoneNumber = publicPhoneNumber;
+  public StationManagement number(Integer number) {
+    this.number = number;
     return this;
   }
 
    /**
-   * Get publicPhoneNumber
-   * @return publicPhoneNumber
+   * identifier
+   * @return number
   **/
-  @ApiModelProperty(value = "")
-  public String getPublicPhoneNumber() {
-    return publicPhoneNumber;
+  @ApiModelProperty(value = "identifier")
+  public Integer getNumber() {
+    return number;
   }
 
-  public void setPublicPhoneNumber(String publicPhoneNumber) {
-    this.publicPhoneNumber = publicPhoneNumber;
+  public void setNumber(Integer number) {
+    this.number = number;
   }
 
 
@@ -102,26 +80,24 @@ public class SZentraleRef {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    SZentraleRef szentraleRef = (SZentraleRef) o;
-    return Objects.equals(this.number, szentraleRef.number) &&
-        Objects.equals(this.name, szentraleRef.name) &&
-        Objects.equals(this.publicPhoneNumber, szentraleRef.publicPhoneNumber);
+    StationManagement stationManagement = (StationManagement) o;
+    return Objects.equals(this.name, stationManagement.name) &&
+        Objects.equals(this.number, stationManagement.number);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(number, name, publicPhoneNumber);
+    return Objects.hash(name, number);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class SZentraleRef {\n");
+    sb.append("class StationManagement {\n");
     
-    sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    publicPhoneNumber: ").append(toIndentedString(publicPhoneNumber)).append("\n");
+    sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("}");
     return sb.toString();
   }

@@ -11,7 +11,7 @@
  */
 
 
-package io.github.martintaraz.hackathon2018.models.stations;
+package io.github.martintaraz.dbdatapublisherbot.models.stations;
 
 import java.util.Objects;
 import java.util.Arrays;
@@ -25,50 +25,50 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * Error
+ * TimetableOffice
  */
 @javax.annotation.processing.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T20:50:44.823+01:00")
-public class Error {
-  @SerializedName("errNo")
-  private Integer errNo = null;
+public class TimetableOffice {
+  @SerializedName("name")
+  private String name = null;
 
-  @SerializedName("errMsg")
-  private String errMsg = null;
+  @SerializedName("email")
+  private String email = null;
 
-  public Error errNo(Integer errNo) {
-    this.errNo = errNo;
+  public TimetableOffice name(String name) {
+    this.name = name;
     return this;
   }
 
    /**
-   * error number
-   * @return errNo
+   * identifier
+   * @return name
   **/
-  @ApiModelProperty(value = "error number")
-  public Integer getErrNo() {
-    return errNo;
+  @ApiModelProperty(value = "identifier")
+  public String getName() {
+    return name;
   }
 
-  public void setErrNo(Integer errNo) {
-    this.errNo = errNo;
+  public void setName(String name) {
+    this.name = name;
   }
 
-  public Error errMsg(String errMsg) {
-    this.errMsg = errMsg;
+  public TimetableOffice email(String email) {
+    this.email = email;
     return this;
   }
 
    /**
-   * error message
-   * @return errMsg
+   * email
+   * @return email
   **/
-  @ApiModelProperty(value = "error message")
-  public String getErrMsg() {
-    return errMsg;
+  @ApiModelProperty(value = "email")
+  public String getEmail() {
+    return email;
   }
 
-  public void setErrMsg(String errMsg) {
-    this.errMsg = errMsg;
+  public void setEmail(String email) {
+    this.email = email;
   }
 
 
@@ -80,24 +80,24 @@ public class Error {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Error error = (Error) o;
-    return Objects.equals(this.errNo, error.errNo) &&
-        Objects.equals(this.errMsg, error.errMsg);
+    TimetableOffice timetableOffice = (TimetableOffice) o;
+    return Objects.equals(this.name, timetableOffice.name) &&
+        Objects.equals(this.email, timetableOffice.email);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(errNo, errMsg);
+    return Objects.hash(name, email);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Error {\n");
+    sb.append("class TimetableOffice {\n");
     
-    sb.append("    errNo: ").append(toIndentedString(errNo)).append("\n");
-    sb.append("    errMsg: ").append(toIndentedString(errMsg)).append("\n");
+    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    email: ").append(toIndentedString(email)).append("\n");
     sb.append("}");
     return sb.toString();
   }

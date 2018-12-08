@@ -11,7 +11,7 @@
  */
 
 
-package io.github.martintaraz.hackathon2018.models.stations;
+package io.github.martintaraz.dbdatapublisherbot.models.stations;
 
 import java.util.Objects;
 import java.util.Arrays;
@@ -25,51 +25,50 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * local public sector entity, responsible for short distance public transport in a specific area
+ * Error
  */
-@ApiModel(description = "local public sector entity, responsible for short distance public transport in a specific area")
 @javax.annotation.processing.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T20:50:44.823+01:00")
-public class Aufgabentraeger {
-  @SerializedName("shortname")
-  private String shortname = null;
+public class Error {
+  @SerializedName("errNo")
+  private Integer errNo = null;
 
-  @SerializedName("name")
-  private String name = null;
+  @SerializedName("errMsg")
+  private String errMsg = null;
 
-  public Aufgabentraeger shortname(String shortname) {
-    this.shortname = shortname;
+  public Error errNo(Integer errNo) {
+    this.errNo = errNo;
     return this;
   }
 
    /**
-   * unique identifier
-   * @return shortname
+   * error number
+   * @return errNo
   **/
-  @ApiModelProperty(value = "unique identifier")
-  public String getShortname() {
-    return shortname;
+  @ApiModelProperty(value = "error number")
+  public Integer getErrNo() {
+    return errNo;
   }
 
-  public void setShortname(String shortname) {
-    this.shortname = shortname;
+  public void setErrNo(Integer errNo) {
+    this.errNo = errNo;
   }
 
-  public Aufgabentraeger name(String name) {
-    this.name = name;
+  public Error errMsg(String errMsg) {
+    this.errMsg = errMsg;
     return this;
   }
 
    /**
-   * full name of Aufgabentraeger
-   * @return name
+   * error message
+   * @return errMsg
   **/
-  @ApiModelProperty(value = "full name of Aufgabentraeger")
-  public String getName() {
-    return name;
+  @ApiModelProperty(value = "error message")
+  public String getErrMsg() {
+    return errMsg;
   }
 
-  public void setName(String name) {
-    this.name = name;
+  public void setErrMsg(String errMsg) {
+    this.errMsg = errMsg;
   }
 
 
@@ -81,24 +80,24 @@ public class Aufgabentraeger {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    Aufgabentraeger aufgabentraeger = (Aufgabentraeger) o;
-    return Objects.equals(this.shortname, aufgabentraeger.shortname) &&
-        Objects.equals(this.name, aufgabentraeger.name);
+    Error error = (Error) o;
+    return Objects.equals(this.errNo, error.errNo) &&
+        Objects.equals(this.errMsg, error.errMsg);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(shortname, name);
+    return Objects.hash(errNo, errMsg);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class Aufgabentraeger {\n");
+    sb.append("class Error {\n");
     
-    sb.append("    shortname: ").append(toIndentedString(shortname)).append("\n");
-    sb.append("    name: ").append(toIndentedString(name)).append("\n");
+    sb.append("    errNo: ").append(toIndentedString(errNo)).append("\n");
+    sb.append("    errMsg: ").append(toIndentedString(errMsg)).append("\n");
     sb.append("}");
     return sb.toString();
   }

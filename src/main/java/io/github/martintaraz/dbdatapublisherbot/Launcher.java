@@ -1,4 +1,4 @@
-package io.github.martintaraz.hackathon2018;
+package io.github.martintaraz.dbdatapublisherbot;
 
 import java.io.File;
 import java.io.IOException;
@@ -13,7 +13,7 @@ import com.google.gson.JsonElement;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
 
-import io.github.martintaraz.hackathon2018.models.stations.StationQuery;
+import io.github.martintaraz.dbdatapublisherbot.models.stations.StationQuery;
 
 
 public class Launcher {

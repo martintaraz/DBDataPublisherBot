@@ -11,7 +11,7 @@
  */
 
 
-package io.github.martintaraz.hackathon2018.models.stations;
+package io.github.martintaraz.dbdatapublisherbot.models.stations;
 
 import java.util.Objects;
 import java.util.Arrays;
@@ -25,50 +25,51 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * StationManagementRef
+ * local public sector entity, responsible for short distance public transport in a specific area
  */
+@ApiModel(description = "local public sector entity, responsible for short distance public transport in a specific area")
 @javax.annotation.processing.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T20:50:44.823+01:00")
-public class StationManagementRef {
+public class Aufgabentraeger {
+  @SerializedName("shortname")
+  private String shortname = null;
+
   @SerializedName("name")
   private String name = null;
 
-  @SerializedName("number")
-  private Integer number = null;
+  public Aufgabentraeger shortname(String shortname) {
+    this.shortname = shortname;
+    return this;
+  }
 
-  public StationManagementRef name(String name) {
+   /**
+   * unique identifier
+   * @return shortname
+  **/
+  @ApiModelProperty(value = "unique identifier")
+  public String getShortname() {
+    return shortname;
+  }
+
+  public void setShortname(String shortname) {
+    this.shortname = shortname;
+  }
+
+  public Aufgabentraeger name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * Get name
+   * full name of Aufgabentraeger
    * @return name
   **/
-  @ApiModelProperty(value = "")
+  @ApiModelProperty(value = "full name of Aufgabentraeger")
   public String getName() {
     return name;
   }
 
   public void setName(String name) {
     this.name = name;
-  }
-
-  public StationManagementRef number(Integer number) {
-    this.number = number;
-    return this;
-  }
-
-   /**
-   * identifier
-   * @return number
-  **/
-  @ApiModelProperty(value = "identifier")
-  public Integer getNumber() {
-    return number;
-  }
-
-  public void setNumber(Integer number) {
-    this.number = number;
   }
 
 
@@ -80,24 +81,24 @@ public class StationManagementRef {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    StationManagementRef stationManagementRef = (StationManagementRef) o;
-    return Objects.equals(this.name, stationManagementRef.name) &&
-        Objects.equals(this.number, stationManagementRef.number);
+    Aufgabentraeger aufgabentraeger = (Aufgabentraeger) o;
+    return Objects.equals(this.shortname, aufgabentraeger.shortname) &&
+        Objects.equals(this.name, aufgabentraeger.name);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, number);
+    return Objects.hash(shortname, name);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class StationManagementRef {\n");
+    sb.append("class Aufgabentraeger {\n");
     
+    sb.append("    shortname: ").append(toIndentedString(shortname)).append("\n");
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("}");
     return sb.toString();
   }

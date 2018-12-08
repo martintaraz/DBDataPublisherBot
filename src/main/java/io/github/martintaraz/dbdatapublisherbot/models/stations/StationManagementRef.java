@@ -11,7 +11,7 @@
  */
 
 
-package io.github.martintaraz.hackathon2018.models.stations;
+package io.github.martintaraz.dbdatapublisherbot.models.stations;
 
 import java.util.Objects;
 import java.util.Arrays;
@@ -25,26 +25,26 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 
 /**
- * TimetableOffice
+ * StationManagementRef
  */
 @javax.annotation.processing.Generated(value = "io.swagger.codegen.languages.JavaClientCodegen", date = "2018-12-07T20:50:44.823+01:00")
-public class TimetableOffice {
+public class StationManagementRef {
   @SerializedName("name")
   private String name = null;
 
-  @SerializedName("email")
-  private String email = null;
+  @SerializedName("number")
+  private Integer number = null;
 
-  public TimetableOffice name(String name) {
+  public StationManagementRef name(String name) {
     this.name = name;
     return this;
   }
 
    /**
-   * identifier
+   * Get name
    * @return name
   **/
-  @ApiModelProperty(value = "identifier")
+  @ApiModelProperty(value = "")
   public String getName() {
     return name;
   }
@@ -53,22 +53,22 @@ public class TimetableOffice {
     this.name = name;
   }
 
-  public TimetableOffice email(String email) {
-    this.email = email;
+  public StationManagementRef number(Integer number) {
+    this.number = number;
     return this;
   }
 
    /**
-   * email
-   * @return email
+   * identifier
+   * @return number
   **/
-  @ApiModelProperty(value = "email")
-  public String getEmail() {
-    return email;
+  @ApiModelProperty(value = "identifier")
+  public Integer getNumber() {
+    return number;
   }
 
-  public void setEmail(String email) {
-    this.email = email;
+  public void setNumber(Integer number) {
+    this.number = number;
   }
 
 
@@ -80,24 +80,24 @@ public class TimetableOffice {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    TimetableOffice timetableOffice = (TimetableOffice) o;
-    return Objects.equals(this.name, timetableOffice.name) &&
-        Objects.equals(this.email, timetableOffice.email);
+    StationManagementRef stationManagementRef = (StationManagementRef) o;
+    return Objects.equals(this.name, stationManagementRef.name) &&
+        Objects.equals(this.number, stationManagementRef.number);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(name, email);
+    return Objects.hash(name, number);
   }
 
 
   @Override
   public String toString() {
     StringBuilder sb = new StringBuilder();
-    sb.append("class TimetableOffice {\n");
+    sb.append("class StationManagementRef {\n");
     
     sb.append("    name: ").append(toIndentedString(name)).append("\n");
-    sb.append("    email: ").append(toIndentedString(email)).append("\n");
+    sb.append("    number: ").append(toIndentedString(number)).append("\n");
     sb.append("}");
     return sb.toString();
   }
