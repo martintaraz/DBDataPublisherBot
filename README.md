@@ -12,5 +12,7 @@ Currently we support
 
 # see also
 https://api.deutschebahn.com/stada/v2 for DB Station Data
+
 https://developer.deutschebahn.com/store/apis/info?name=StaDa-Station_Data&version=v2&provider=DBOpenData for Documentation of the API
+
 https://www.wikidata.org/wiki/User:DBDataPublisherBot for our bot activity
